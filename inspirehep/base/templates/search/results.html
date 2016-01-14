@@ -62,7 +62,7 @@
 {% endmacro %}
 
 {% macro render_facets() %}
-<div class="col-md-3 visible-md visible-lg" id="facetparent">
+<div class="col-md-3 visible-lg" id="facetparent">
   <div class="facet" id="facet_list" data-clampedwidth="#facetparent">
   {% if not request.args.get('cc') or request.args.get('cc').lower() == "hep" %}
     {% include 'search/facets/hep.html' %}
@@ -115,7 +115,7 @@
   {%- if pagination %}
   <div class="row" id="search-results">
   {{ render_facets() }}
-    <div class="col-md-9">
+    <div class="col-md-12 col-lg-9">
       <div class="panel panel-default" id="results-control-panel">
         <div class="panel-body" >
           {{ render_pagination() }}
